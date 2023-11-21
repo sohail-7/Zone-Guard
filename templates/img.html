@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Result{% endblock %}
+{% block content %}
+    
+
+    <h1 style="text-align:center;margin-top: 1cm;">Captured-Images</h1>
+    <div class="container">
+      <div class="row">
+    {% for hist in hists %}
+    <div class="col-lg-0 col-md-3 col-sm-2">
+            <!-- <img src="{{ hist }}" alt="{{ hist }}"> -->
+            <img  src="{{url_for('static',filename='/Image'+'/'+hist)}}">
+          </div>
+          {% endfor %}
+      </div>
+  </div>
+    
+    <!-- <div class="container border=1 mt-5">
+      <div class="row">
+        {% for hist in hists %}
+        <div class="col-sm-4">
+          <div class="card" style="width: 200px; height: 300px;">
+            <img src="{{url_for('static',filename='/Image'+'/'+hist)}}">
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        {% endfor %}
+      </div>
+    </div> -->
+    
+
+    
+  
+    <!-- <img src="{{url_for('static',filename='/Image/09_11_2023_13_41_03.png')}}"> -->
+{% endblock %}

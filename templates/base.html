@@ -1,0 +1,93 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>{% block title %}Home{% endblock %}</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{{ url_for('home') }}"><a class="navbar-brand"> 
+          <img src="{{url_for('static',filename='photos/logo1.png')}}" width="50" height="50" class="d-inline-block align-top" alt="Logo">
+      </a></a>
+        
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{{ url_for('ninja') }}">Result</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{{ url_for('clr') }}">Clear</a>
+            </li>
+        
+          
+          </ul>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" id="login" href="{{ url_for('about') }}">About</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+      </nav>
+      {% block content %}
+      <div class="container">
+        <main role="main" class="container">
+          <div class="jumbotron">
+            <div class="row">
+                <div class="col-5">
+                    <p class="lead mx-2">  Upload A video.</p> 
+                  
+                </div>
+                <div class="col-5 mt-5">
+                    <div class="row-1">
+                        <div class="col-5">
+      
+                            <p><form method="post">
+                              <input type="file" accept="video/*" name="video_id" id="video_id"> 
+                          
+                              
+                            </p>
+                            <hr>
+                        </div>
+                        <div class="col-5">
+                            <p><input type="submit" value="submit"></form><span class="mx-3" id="wind_speed"></span></p>
+                            <hr>
+                        </div>
+                    </div>
+                      
+                </div>
+          </div>
+        </div>
+        </main>
+      </div>
+        {% endblock %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+<style>
+    .container{
+        margin-top:2cm;
+    }
+</style>
+
