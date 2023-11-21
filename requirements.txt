@@ -103,7 +103,7 @@ PySocks==1.7.1
 python-dateutil==2.8.2
 python-json-logger==2.0.4
 pytz==2022.7.1
-pywin32==305
+pywin32==23.3.1
 pywinpty==2.0.10
 PyYAML==6.0
 pyzmq==25.0.0
