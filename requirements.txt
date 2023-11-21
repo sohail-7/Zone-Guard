@@ -39,7 +39,7 @@ frozendict==2.3.8
 greenlet==2.0.2
 gunicorn==21.2.0
 h11==0.14.0
-holidays==0.30
+holidays==0.27.1
 html5lib==1.1
 idna==3.4
 importlib-resources==6.0.1
